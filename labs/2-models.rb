@@ -45,9 +45,18 @@ puts "No wonder our company doesn't make any money, we only have #{Salesperson.a
 # Salespeople: 2
 
 # 4. modify/update column data for a row in the salespeople table.
+jane = Salesperson.find_by({"first_name" => "Jane"})
+jane["last_name"] = "Money-Bags"
+jane.save
+
 
 # CHALLENGE:
 # 5. write code to display each salesperson's full name
+all_salespeople = Salesperson.all
+for salesperson in all_salespeople
+    puts "#{salesperson["first_name"]} #{salesperson["last_name"]}"
+end
+
 
 # ---------------------------------
 # Salespeople: 2
