@@ -20,8 +20,26 @@ Salesperson.destroy_all
 # 1b. check out the model file
 
 # 2. insert 1-2 rows in salespeople table.
+new_salesperson = Salesperson.new
+new_salesperson["first_name"] = "Joe"
+new_salesperson["last_name"] = "Revenue"
+new_salesperson["email"] = "joe_revenue@gmail.com"
+new_salesperson.save
+
+
+new_salesperson2 = Salesperson.new
+new_salesperson2["first_name"] = "Jane"
+new_salesperson2["last_name"] = "Profit"
+new_salesperson2["email"] = "jane_profit@gmail.com"
+new_salesperson2.save
+
+
+
 
 # 3. write code to display how many salespeople rows are in the database
+
+puts "No wonder our company doesn't make any money, we only have #{Salesperson.all.count} sales reps :( "
+
 
 # ---------------------------------
 # Salespeople: 2
